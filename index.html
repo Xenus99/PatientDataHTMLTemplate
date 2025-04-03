@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coalition Skills Test: Tech Care</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">
+      <img src="img/TestLogo.svg" alt="Tech.Care Logo">
+    </div>
+
+    <nav class="navlist">
+      <ul>
+        <li><a href="#"><img src="img/overview-icon.svg">Overview</a></li>
+        <li class="active"><a href="#"><img src="img/patient-icon.svg">Patients</a></li>
+        <li><a href="#"><img src="img/schedule-icon.svg" height="20px" width="20px">Schedule</a></li>
+        <li><a href="#"><img src="img/message-icon.svg">Message</a></li>
+        <li><a href="#"><img src="img/transactions-icon.svg">Transactions</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-profile">
+      <img src="img/dr-profile-pic-sm.png" alt="Profile Picture" class="profile-pic">
+      <div class="profile-info">
+        <h3>Dr. Jose Simmons</h3>
+        <p>General Practitioner</p>
+      </div>
+      <button class="settings-btn">
+        <img src="img/settings-icon.svg" alt="Settings">
+      </button>
+      <button class="settings-btn">
+        <img src="img/burger-vertical.svg" alt="Dots">
+      </button>
+    </div>
+  </div>
+
+  <!-- Three Divisions -->
+  <div class="content-sections">
+    <div class="section section-left">
+        <div class="patient-list">
+            <span style="display:flex">
+                <h2 class="patient-list-title">Patients</h2>
+                <button><img src="img/search-icon.svg"></button>
+            </span>
+        
+            <ul class="patient-items" id="patient-items">
+              
+                <!-- Patients List -->
+
+            </ul>
+          </div>
+    </div>
+
+    <div class="section section-middle">
+        <div class="diagnosis-history-section">
+            <h2 class="patient-list-title">Diagnosis History</h2>
+            <div class="chart">
+    
+              <canvas id="bloodPressureChart" width="600" height="250"></canvas>
+
+            </div>
+
+            <div class="content-sections">
+
+                <div class="section-resp">
+                    <div class="card">
+                        <div class="icon-container">
+                          <img src="img/respiratory-rate-icon.svg" alt="Respiratory Rate Icon">
+                        </div>
+                        <div class="card-content">
+                          <p class="label">Respiratory Rate</p>
+                          <p class="value" id="resp-value">20 bpm</p>
+                          <br>
+                          <p class="status">Normal</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="section-temp">
+                    <div class="card">
+                        <div class="icon-container">
+                          <img src="img/temperature-icon.svg" alt="Respiratory Rate Icon">
+                        </div>
+                        <div class="card-content">
+                          <p class="label">Temperature</p>
+                          <p class="value" id="temp-value">98.6&#8457</p>
+                          <br>
+                          <p class="status">Normal</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="section-heart">
+                    <div class="card">
+                        <div class="icon-container">
+                          <img src="img/heart-rate-icon.svg" alt="Respiratory Rate Icon">
+                        </div>
+                        <div class="card-content">
+                          <p class="label">Heart Rate</p>
+                          <p class="value"  id="heart-value">78 bpm</p>
+                          <br>
+                          <p class="status">Normal</p>
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+        <div class="diagnostic-list">
+            <h2>Diagnostic List</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Problem/Diagnosis</th>
+                  <th>Description</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="diagnostic-list">
+                
+                <!-- Diagnostic List -->
+
+              </tbody>
+            </table>
+          </div>
+    </div>
+
+
+    <div class="section section-right">
+        <div class="patient-card">
+            <!-- <div class="profile-picture" id="profile-name"></div> -->
+            <div class="profile-picture">
+              <img id='prof-pic' src="" alt="Jessica Taylor">
+            </div>
+            <h2 class="name" id="name"></h2>
+            <div class="info">
+
+              <div class="info-item">
+                <img src="img/schedule-icon.svg" alt="Calendar">
+                <div>
+                  <p>Date Of Birth</p>
+                    <b><p id="profile-dob"></p></b>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <img src="img/female-icon.svg" alt="Gender">
+                <div>
+                  <p>Gender</p>
+                    <b><p id="profile-gender"></p></b>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <img src="img/contact-icon.svg" alt="Contact Info">
+                <div>
+                  <p>Contact Info.</p>
+                    <b><p id="profile-phone-number"></p></b>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <img src="img/contact-icon.svg" alt="Emergency Contacts">
+                <div>
+                  <p>Emergency Contacts</p>
+                  <b><p id="profile-emergency-contact"></p></b>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <img src="img/insuarance-icon.svg" alt="Insurance Provider">
+                <div>
+                  <p>Insurance Provider</p>
+                    <b><p id="profile-insurance-type"></p></b>
+                </div>
+              </div>
+
+            </div>
+            <br>
+            <button class="show-info-button">Show All Information</button>
+            <br>
+          </div>
+
+
+          <div class="lab-results-card">
+            <h2 class="card-title">Lab Results</h2>
+            <div class="lab-results-list" id="lab-results-list">
+
+            <!-- Lab Results -->
+
+            </div>
+        </div>
+    </div>
+  </div>
+
+</body>
+</html>
